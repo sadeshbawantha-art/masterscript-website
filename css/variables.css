@@ -1,0 +1,44 @@
+/* ============================================================
+   variables.css – Design Tokens / CSS Custom Properties
+   Edit colours, fonts, spacing here and they update site-wide
+   ============================================================ */
+
+:root {
+  /* ── Colours ── */
+  --navy:        #0f2044;
+  --blue:        #1a3a7c;
+  --sky:         #3b82f6;
+  --gold:        #c09b4a;
+  --gold-light:  #d4af6a;
+  --light:       #f5f7fc;
+  --white:       #ffffff;
+  --muted:       #64748b;
+  --border:      #e2e8f0;
+  --success-bg:  #dcfce7;
+  --success-txt: #15803d;
+  --success-bdr: #86efac;
+  --error-bg:    #fee2e2;
+  --error-txt:   #dc2626;
+  --error-bdr:   #fca5a5;
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* ── Spacing ── */
+  --section-pad: 96px;
+  --container:   1160px;
+  --gap:         24px;
+
+  /* ── Shape ── */
+  --radius:      14px;
+  --radius-sm:   8px;
+  --radius-pill: 50px;
+
+  /* ── Shadow ── */
+  --shadow:      0 4px 32px rgba(15, 32, 68, 0.08);
+  --shadow-lg:   0 12px 48px rgba(15, 32, 68, 0.14);
+
+  /* ── Transitions ── */
+  --transition:  0.25s ease;
+}

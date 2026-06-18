@@ -1,0 +1,16 @@
+/* footer.css */
+footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 56px 0 28px; }
+.footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer-logo { width: 56px; height: 56px; border-radius: 10px; object-fit: contain; }
+.footer-brand h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--white); margin: 14px 0 12px; }
+.footer-brand p  { font-size: 0.87rem; line-height: 1.7; }
+.footer-col h4 { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 16px; }
+.footer-col li { margin-bottom: 10px; font-size: 0.87rem; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px; font-size: 0.82rem;
+}
+.footer-bottom a { color: var(--gold); }

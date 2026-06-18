@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Script – Academic Writing Services</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/samples.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       MOBILE MENU OVERLAY
+  ══════════════════════════════════════ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <a href="#services">Services</a>
+    <a href="#specialisms">Specialisms</a>
+    <a href="#samples">Sample Work</a>
+    <a href="#global">Global Reach</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PDF MODAL VIEWER
+  ══════════════════════════════════════ -->
+  <div class="pdf-modal" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+    <div class="pdf-modal-box">
+      <div class="pdf-modal-header">
+        <div class="pdf-modal-header-left">
+          <img src="assets/logo.svg" alt="Master Script Logo" class="pdf-modal-logo" />
+          <h3 id="pdfModalTitle">Sample Work</h3>
+        </div>
+        <button class="pdf-modal-close" id="pdfModalClose" aria-label="Close viewer">✕</button>
+      </div>
+      <div class="pdf-viewer-wrap">
+        <div class="pdf-watermark-overlay">
+          <img src="assets/logo.svg" alt="Master Script Watermark" class="pdf-wm-img" />
+          <span class="pdf-wm-corner">© Master Script – For Reference Only</span>
+        </div>
+        <iframe id="pdfIframe" class="pdf-iframe" title="PDF Sample Viewer"></iframe>
+      </div>
+      <div class="pdf-modal-footer">
+        © Master Script &nbsp;·&nbsp; This document is provided for reference only. Reproduction is strictly prohibited.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Master Script Home">
+        <img src="assets/logo.svg" alt="Master Script Logo" />
+        <div class="nav-logo-text">Master<br /><span>Script</span></div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#specialisms">Specialisms</a></li>
+        <li><a href="#samples">Sample Work</a></li>
+        <li><a href="#global">Global Reach</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="tel:+94766143893" class="btn btn-outline">📞 Call Us</a>
+        <a href="#contact" class="btn btn-primary">Get a Quote</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Trusted by Students Globally – UK · NZ · AU &amp; more
+        </div>
+        <h1>Academic Writing,<br /><em>Done Right.</em></h1>
+        <p>From HND to PhD — expert assignment writing, SPSS data analysis, research proposals, and proofreading. 100% original, properly cited, and structured to achieve top grades.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-gold">📩 Get a Free Quote</a>
+          <a href="#samples" class="btn btn-hero-outline">View Sample Work</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <h3>0%</h3>
+            <p>AI Detection (Turnitin)</p>
+          </div>
+          <div class="hero-stat">
+            <h3>3+</h3>
+            <p>Countries Served</p>
+          </div>
+          <div class="hero-stat">
+            <h3>100%</h3>
+            <p>Satisfaction Promise</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card-stack">
+          <div class="hero-card">
+            <div class="hero-card-icon">📊</div>
+            <h4>SPSS &amp; Data Analysis</h4>
+            <p>Regression, ANOVA, reliability tests &amp; full statistical write-ups</p>
+            <div class="turnitin-badge">
+              <span class="check">✓</span>
+              <span>0% AI Detected · Turnitin Verified</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">📝</div>
+            <h4>Research Proposals</h4>
+            <p>MBA-level proposals with full literature reviews &amp; methodology</p>
+            <div class="turnitin-badge">
+              <span class="check">✓</span>
+              <span>Harvard / APA / Chicago Citation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TRUST STRIP
+  ══════════════════════════════════════ -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="icon">📚</span> APA &amp; Harvard Referencing</div>
+      <div class="trust-item"><span class="icon">🔍</span> ScienceDirect &amp; Emerald Sources</div>
+      <div class="trust-item"><span class="icon">✅</span> 0% AI Detection</div>
+      <div class="trust-item"><span class="icon">🌐</span> ABDC-Ranked Journals</div>
+      <div class="trust-item"><span class="icon">🎓</span> HND → PhD Level</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Comprehensive Academic<br />Writing Services</h2>
+        <p class="section-sub">End-to-end support for every stage of your academic journey — from brief analysis to final submission.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">✍️</div>
+          <h3>Assignment Writing (A–Z)</h3>
+          <p>Full assignment writing from scratch — structured, well-argued, and properly cited. We handle every section so you don't have to start from zero.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔬</div>
+          <h3>Full Research Process</h3>
+          <p>Qualitative &amp; quantitative research design, data collection strategy, analysis, findings &amp; discussion — end-to-end.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📊</div>
+          <h3>SPSS Data Analysis</h3>
+          <p>Descriptive statistics, regression, correlation, ANOVA, reliability tests (Cronbach's Alpha) with full interpretation.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📈</div>
+          <h3>Power BI Dashboards</h3>
+          <p>Data visualisations, interactive dashboards, and business intelligence reports using Power BI for data-driven assignments.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔎</div>
+          <h3>Proofreading &amp; Editing</h3>
+          <p>Academic language polishing, grammar correction, structure improvement — without rewriting your own voice away.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🏗️</div>
+          <h3>Assignment Structuring</h3>
+          <p>We map out your brief, build the right structure, and guide you on what goes where — before you write a single word.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📖</div>
+          <h3>Research Consulting</h3>
+          <p>We teach you how to search ScienceDirect, Emerald, Google Scholar and ABDC-ranked journals faster and smarter.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">💬</div>
+          <h3>Writing Consultations</h3>
+          <p>One-to-one sessions to improve your academic writing without using AI — building real skills that last.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SPECIALISMS
+  ══════════════════════════════════════ -->
+  <section class="section specialisms" id="specialisms">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Our Expertise</span>
+        <h2 class="section-title">Specialised Subject Areas</h2>
+        <p class="section-sub">We cover a wide range of business and management disciplines, from foundational HND modules to advanced MBA and PhD-level research.</p>
+      </div>
+      <div class="spec-grid reveal">
+        <div class="spec-pill"><span class="sp-icon">🔬</span> Research Methods</div>
+        <div class="spec-pill"><span class="sp-icon">📊</span> SPSS Data Analysis</div>
+        <div class="spec-pill"><span class="sp-icon">🔍</span> Qualitative Analysis</div>
+        <div class="spec-pill"><span class="sp-icon">📈</span> Power BI</div>
+        <div class="spec-pill"><span class="sp-icon">📣</span> Marketing Management</div>
+        <div class="spec-pill"><span class="sp-icon">💰</span> Finance Management</div>
+        <div class="spec-pill"><span class="sp-icon">👥</span> Human Resource Management</div>
+        <div class="spec-pill"><span class="sp-icon">♟️</span> Strategic Management</div>
+        <div class="spec-pill"><span class="sp-icon">📋</span> Business Management</div>
+        <div class="spec-pill"><span class="sp-icon">🏢</span> Organisational Behaviour</div>
+        <div class="spec-pill"><span class="sp-icon">🌐</span> International Business</div>
+        <div class="spec-pill"><span class="sp-icon">📝</span> MBA Dissertations</div>
+      </div>
+      <div class="levels-wrap reveal">
+        <p class="section-label">Study Levels We Support</p>
+        <div class="levels-list">
+          <span class="level-badge">HND</span>
+          <span class="level-badge">Bachelor's Degree</span>
+          <span class="level-badge">Postgraduate Diploma</span>
+          <span class="level-badge">MBA</span>
+          <span class="level-badge">PhD / Doctoral Research</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SAMPLE WORK
+  ══════════════════════════════════════ -->
+  <section class="section samples" id="samples">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Sample Work</h2>
+        <p class="section-sub">View our completed assignments — all verified through Turnitin. Click "View Sample" to read the full document.</p>
+      </div>
+      <div class="samples-note reveal">
+        <span>⚠️</span>
+        <span>All sample work is protected by copyright and belongs exclusively to Master Script. Documents are watermarked and provided for reference only. Reproduction is strictly prohibited.</span>
+      </div>
+      <div class="samples-grid">
+
+        <!-- Sample 1 -->
+        <div class="sample-card reveal">
+          <div class="sample-preview" style="background: linear-gradient(135deg, #0f2044, #1a3a7c);">
+            <div class="wm-layer">
+              <img src="assets/logo.svg" alt="Master Script Watermark" class="wm-img" />
+            </div>
+            <span class="wm-text">© Master Script</span>
+            <span class="sample-type-badge">Essay</span>
+            <span class="turnitin-tag">✓ 0% AI</span>
+            <div class="sample-doc-icon">📄</div>
+          </div>
+          <div class="sample-body">
+            <div class="sample-level">ECE Level · Early Childhood Education</div>
+            <h3>Quality in ECE through the Lenses of Social Justice and Cultural Diversity</h3>
+            <p>A critical essay exploring staff-child ratios, the 20 Hours ECE policy, and whanaungatanga in Aotearoa New Zealand's ECE context.</p>
+            <div class="sample-meta">
+              <span>📝 1,597 words</span>
+              <span>📚 APA</span>
+              <span>✅ 0% AI · Turnitin</span>
+            </div>
+            <div class="sample-actions">
+              <button class="btn btn-primary btn-sm"
+                data-pdf="assets/sample_ECE.pdf"
+                data-title="ECE Essay – Quality in Early Childhood Education">
+                👁 View Sample
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 2 -->
+        <div class="sample-card reveal">
+          <div class="sample-preview" style="background: linear-gradient(135deg, #1a2e1a, #2d5a27);">
+            <div class="wm-layer">
+              <img src="assets/logo.svg" alt="Master Script Watermark" class="wm-img" />
+            </div>
+            <span class="wm-text">© Master Script</span>
+            <span class="sample-type-badge">Research Proposal</span>
+            <span class="turnitin-tag">✓ &lt;20% AI</span>
+            <div class="sample-doc-icon">📋</div>
+          </div>
+          <div class="sample-body">
+            <div class="sample-level">MBA Level · CSR / Business Management</div>
+            <h3>CSR Practices &amp; Company Performance at Nestlé Lanka Using Carroll's Pyramid</h3>
+            <p>Full MBA research proposal with literature review, conceptual framework, hypotheses, positivist methodology and Gantt chart.</p>
+            <div class="sample-meta">
+              <span>📝 4,700 words</span>
+              <span>📚 Harvard</span>
+              <span>✅ Turnitin Verified</span>
+            </div>
+            <div class="sample-actions">
+              <button class="btn btn-primary btn-sm"
+                data-pdf="assets/sample_MBA_CSR.pdf"
+                data-title="MBA Research Proposal – Nestlé Lanka CSR">
+                👁 View Sample
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 3 -->
+        <div class="sample-card reveal">
+          <div class="sample-preview" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+            <div class="wm-layer">
+              <img src="assets/logo.svg" alt="Master Script Watermark" class="wm-img" />
+            </div>
+            <span class="wm-text">© Master Script</span>
+            <span class="sample-type-badge">Strategic Report</span>
+            <span class="turnitin-tag">✓ 0% AI</span>
+            <div class="sample-doc-icon">📊</div>
+          </div>
+          <div class="sample-body">
+            <div class="sample-level">MSc / Postgraduate · Strategic Management</div>
+            <h3>Lloyds Banking Group: TOWS Analysis, Digital Wealth Strategy &amp; Business Model Canvas</h3>
+            <p>Strategic report evaluating Lloyds' competitive position with TOWS matrix and Business Model Canvas for 2024–2026.</p>
+            <div class="sample-meta">
+              <span>📝 2,292 words</span>
+              <span>📚 Harvard</span>
+              <span>✅ 0% AI · Turnitin</span>
+            </div>
+            <div class="sample-actions">
+              <button class="btn btn-primary btn-sm"
+                data-pdf="assets/sample_Strategic.pdf"
+                data-title="Strategic Report – Lloyds Banking Group TOWS & BMC">
+                👁 View Sample
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 4 -->
+        <div class="sample-card reveal">
+          <div class="sample-preview" style="background: linear-gradient(135deg, #2c1654, #6b21a8);">
+            <div class="wm-layer">
+              <img src="assets/logo.svg" alt="Master Script Watermark" class="wm-img" />
+            </div>
+            <span class="wm-text">© Master Script</span>
+            <span class="sample-type-badge">Presentation</span>
+            <span class="turnitin-tag">✓ Verified</span>
+            <div class="sample-doc-icon">📊</div>
+          </div>
+          <div class="sample-body">
+            <div class="sample-level">Degree / MBA Level · Finance Management</div>
+            <h3>Boots UK – Financial Sustainability Analysis</h3>
+            <p>A structured PowerPoint presentation analysing Boots UK's financial sustainability, covering key financial ratios, profitability trends, and strategic recommendations.</p>
+            <div class="sample-meta">
+              <span>📊 PowerPoint</span>
+              <span>💰 Finance</span>
+              <span>✅ Verified</span>
+            </div>
+            <div class="sample-actions">
+              <button class="btn btn-primary btn-sm"
+                data-pdf="assets/sample_Boots_UK.pdf"
+                data-title="Boots UK – Financial Sustainability Analysis (Presentation)">
+                👁 View Sample
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 5 -->
+        <div class="sample-card reveal">
+          <div class="sample-preview" style="background: linear-gradient(135deg, #7c2d12, #c2410c);">
+            <div class="wm-layer">
+              <img src="assets/logo.svg" alt="Master Script Watermark" class="wm-img" />
+            </div>
+            <span class="wm-text">© Master Script</span>
+            <span class="sample-type-badge">Report</span>
+            <span class="turnitin-tag">✓ 0% AI</span>
+            <div class="sample-doc-icon">📋</div>
+          </div>
+          <div class="sample-body">
+            <div class="sample-level">Degree / MBA Level · Finance &amp; Strategic Management</div>
+            <h3>Strategic Financial Modelling – DCF Analysis of ACL Plastics &amp; Alumax PLC</h3>
+            <p>Full financial modelling report using DCF valuation, scenario analysis (optimistic, realistic, pessimistic), and risk mitigation insights for two Sri Lankan listed companies.</p>
+            <div class="sample-meta">
+              <span>📝 2,459 words</span>
+              <span>📚 Harvard</span>
+              <span>✅ 0% AI · Turnitin</span>
+            </div>
+            <div class="sample-actions">
+              <button class="btn btn-primary btn-sm"
+                data-pdf="assets/sample_FM_Financial_Modelling.pdf"
+                data-title="Strategic Financial Modelling – DCF Analysis of ACL Plastics & Alumax PLC">
+                👁 View Sample
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample 6 -->
+        <div class="sample-card reveal">
+          <div class="sample-preview" style="background: linear-gradient(135deg, #064e3b, #065f46);">
+            <div class="wm-layer">
+              <img src="assets/logo.svg" alt="Master Script Watermark" class="wm-img" />
+            </div>
+            <span class="wm-text">© Master Script</span>
+            <span class="sample-type-badge">Assignment</span>
+            <span class="turnitin-tag">✓ 0% AI</span>
+            <div class="sample-doc-icon">📄</div>
+          </div>
+          <div class="sample-body">
+            <div class="sample-level">HND / Postgraduate · Business Communication</div>
+            <h3>Communication in Business – Analysis of Dialog Axiata PLC</h3>
+            <p>OTHM-qualified assignment (Unit A/650/1103) analysing communication models (Shannon-Weaver &amp; Berlo SMCR), internal/external stakeholder communication, and a written communication portfolio.</p>
+            <div class="sample-meta">
+              <span>📝 3,495 words</span>
+              <span>📚 Harvard</span>
+              <span>✅ 0% AI · Turnitin</span>
+            </div>
+            <div class="sample-actions">
+              <button class="btn btn-primary btn-sm"
+                data-pdf="assets/sample_Communication_Business.pdf"
+                data-title="Communication in Business – Analysis of Dialog Axiata PLC">
+                👁 View Sample
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="copyright-notice reveal">
+        © <strong>Master Script</strong>. All sample works are protected under copyright law. Unauthorised reproduction or distribution is prohibited.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       GLOBAL REACH
+  ══════════════════════════════════════ -->
+  <section class="section global" id="global">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Global Reach</span>
+        <h2 class="section-title">We Serve Students<br />Around the World</h2>
+        <p class="section-sub">Our clients study at universities and colleges across multiple countries. Wherever you are, we have you covered.</p>
+      </div>
+      <div class="countries-grid reveal">
+        <div class="country-card">
+          <span class="flag-emoji">🇬🇧</span>
+          <div>
+            <h3>United Kingdom</h3>
+            <p>HND, Degree, PGD, MBA &amp; PhD students at UK institutions</p>
+          </div>
+        </div>
+        <div class="country-card">
+          <span class="flag-emoji">🇳🇿</span>
+          <div>
+            <h3>New Zealand</h3>
+            <p>Supporting ECE, business and research students across NZ</p>
+          </div>
+        </div>
+        <div class="country-card">
+          <span class="flag-emoji">🇦🇺</span>
+          <div>
+            <h3>Australia</h3>
+            <p>Assisting postgraduate and undergraduate students at Australian universities</p>
+          </div>
+        </div>
+        <div class="country-card">
+          <span class="flag-emoji">🇱🇰</span>
+          <div>
+            <h3>Sri Lanka</h3>
+            <p>Local and international-intake students at NSBM, SLIIT, Colombo &amp; more</p>
+          </div>
+        </div>
+        <div class="country-card">
+          <span class="flag-emoji">🌍</span>
+          <div>
+            <h3>&amp; Worldwide</h3>
+            <p>We work with students globally — reach out wherever you are</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHY US
+  ══════════════════════════════════════ -->
+  <section class="section why" id="why">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">What Sets Us Apart</h2>
+        <p class="section-sub">We don't just write assignments. We build work that stands up to academic scrutiny — every single time.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="why-num">01</div>
+          <h3>Zero AI Detection</h3>
+          <p>Every piece is written by a human, verified through Turnitin — 0% AI flagged. We have the reports to prove it.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">02</div>
+          <h3>Real Academic Sources</h3>
+          <p>We use ScienceDirect, Emerald Insight, Google Scholar and ABDC-ranked journals — not random websites.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">03</div>
+          <h3>Proper Referencing</h3>
+          <p>APA, Harvard, Chicago — whichever your institution requires, done correctly with in-text citations and full reference lists.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">04</div>
+          <h3>We Actually Read the Brief</h3>
+          <p>Every assignment is analysed against the marking criteria before a single word is written. No generic templates.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">05</div>
+          <h3>Skills, Not Just Answers</h3>
+          <p>Our consultations teach you how to find better sources faster — a real skill that saves hours on future assignments.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">06</div>
+          <h3>Direct &amp; Responsive</h3>
+          <p>You deal with Sadesh directly — no middlemen, no delays. Fast turnarounds and clear communication throughout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+
+        <div class="contact-info reveal">
+          <span class="section-label">Get in Touch</span>
+          <h2 class="section-title">Ready to Get<br />Started?</h2>
+          <p>Send your assignment brief, deadline, and any guidelines. Attach your files directly — we'll review everything and come back with a clear plan and quote, usually within a few hours.</p>
+          <div class="contact-detail">
+            <div class="cd-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:sadeshbawantha@gmail.com">sadeshbawantha@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">📱</div>
+            <div>
+              <h4>WhatsApp / Phone</h4>
+              <p><a href="tel:+94766143893">+94 766 143 893</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">🌐</div>
+            <div>
+              <h4>Serving Students In</h4>
+              <p>🇬🇧 UK &nbsp;·&nbsp; 🇳🇿 New Zealand &nbsp;·&nbsp; 🇦🇺 Australia &nbsp;·&nbsp; 🇱🇰 Sri Lanka &amp; Worldwide</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">⏱️</div>
+            <div>
+              <h4>Response Time</h4>
+              <p>Usually within a few hours</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <h3>Send an Enquiry</h3>
+          <form id="inquiryForm"
+                action="https://formsubmit.co/sadeshbawantha@gmail.com"
+                method="POST"
+                enctype="multipart/form-data">
+
+            <!-- FormSubmit hidden fields -->
+            <input type="hidden" name="_subject" value="New Assignment Enquiry – Master Script" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="First Name" placeholder="Your first name" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="Last Name" placeholder="Your last name" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="Email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">WhatsApp / Phone</label>
+              <input type="text" id="phone" name="Phone / WhatsApp" placeholder="+44 7xxx xxxxxx" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="level">Study Level *</label>
+                <select id="level" name="Study Level" required>
+                  <option value="">Select level…</option>
+                  <option>HND</option>
+                  <option>Bachelor's Degree</option>
+                  <option>Postgraduate Diploma</option>
+                  <option>MBA</option>
+                  <option>PhD / Doctoral</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Required *</label>
+                <select id="service" name="Service Required" required>
+                  <option value="">Select service…</option>
+                  <option>Full Assignment Writing</option>
+                  <option>Research / Literature Review</option>
+                  <option>SPSS Data Analysis</option>
+                  <option>Qualitative Data Analysis</option>
+                  <option>Power BI Dashboard</option>
+                  <option>Proofreading &amp; Editing</option>
+                  <option>Assignment Structuring</option>
+                  <option>Writing Consultation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject / Module</label>
+              <input type="text" id="subject" name="Subject Module" placeholder="e.g. Strategic Management, HRM, Research Methods…" />
+            </div>
+
+            <div class="form-group">
+              <label for="deadline">Deadline *</label>
+              <input type="date" id="deadline" name="Deadline" required />
+            </div>
+
+            <div class="form-group">
+              <label for="details">Assignment Details &amp; Requirements *</label>
+              <textarea id="details" name="Assignment Details"
+                placeholder="Paste your assignment brief, word count, marking criteria, and any specific instructions here…"
+                required></textarea>
+            </div>
+
+            <!-- FILE UPLOAD -->
+            <div class="form-group">
+              <label>
+                Attach Files
+                <span class="label-note">(Brief, marking rubric, guidelines — PDF, Word, images)</span>
+              </label>
+              <div class="file-upload-wrap">
+                <label class="file-upload-label" id="dropZone" for="assignmentFiles">
+                  <span class="up-icon">📎</span>
+                  <span class="up-main">Drop files here or <span class="up-browse">browse</span></span>
+                  <span class="up-sub">PDF, DOC, DOCX, JPG, PNG — up to 25MB each · Multiple files allowed</span>
+                </label>
+                <input type="file" id="assignmentFiles" name="Assignment Files"
+                  multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.txt,.xlsx,.pptx" />
+              </div>
+              <div class="file-list" id="fileList"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">📩 Send Enquiry</button>
+            <p class="form-note">Your enquiry and attached files go directly to sadeshbawantha@gmail.com. We usually respond within a few hours.</p>
+            <div id="formStatus" role="alert"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Master Script Logo" class="footer-logo" />
+          <h3>Master Script</h3>
+          <p>Expert academic writing services for HND, Degree, Postgraduate Diploma, MBA and PhD students — delivered with integrity, properly cited, and 100% original.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Assignment Writing</a></li>
+            <li><a href="#services">Research &amp; Literature Review</a></li>
+            <li><a href="#services">SPSS Data Analysis</a></li>
+            <li><a href="#services">Power BI</a></li>
+            <li><a href="#services">Proofreading</a></li>
+            <li><a href="#services">Consultations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Specialisms</h4>
+          <ul>
+            <li>Marketing Management</li>
+            <li>Finance Management</li>
+            <li>Strategic Management</li>
+            <li>HRM</li>
+            <li>Business Management</li>
+            <li>Qualitative Research</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Master Script. All rights reserved. All sample works are protected by copyright.</p>
+        <p>Made with ❤️ for students worldwide &nbsp;·&nbsp;
+          <a href="mailto:sadeshbawantha@gmail.com">sadeshbawantha@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       JAVASCRIPT FILES
+  ══════════════════════════════════════ -->
+  <script src="js/nav.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

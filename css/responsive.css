@@ -1,0 +1,42 @@
+/* ============================================================
+   responsive.css – Breakpoints & Mobile Adjustments
+   ============================================================ */
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .hero-inner        { grid-template-columns: 1fr; }
+  .hero-visual       { display: none; }
+  .contact-wrap      { grid-template-columns: 1fr; }
+  .footer-top        { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Mobile (≤ 640px) ── */
+@media (max-width: 640px) {
+  :root { --section-pad: 64px; }
+
+  /* Nav */
+  .nav-links         { display: none; }
+  .nav-cta .btn-outline { display: none; }
+  .hamburger         { display: flex; }
+
+  /* Hero */
+  .hero              { padding: 80px 0 64px; }
+  .hero-stats        { gap: 20px; }
+
+  /* Grids */
+  .form-row          { grid-template-columns: 1fr; }
+  .footer-top        { grid-template-columns: 1fr; }
+  .samples-grid      { grid-template-columns: 1fr; }
+  .countries-grid    { grid-template-columns: 1fr 1fr; }
+
+  /* PDF Modal */
+  .pdf-modal         { padding: 8px; }
+  .pdf-modal-box     { max-height: 96vh; }
+  .pdf-viewer-wrap   { height: 65vh; }
+}
+
+/* ── Small mobile (≤ 400px) ── */
+@media (max-width: 400px) {
+  .countries-grid    { grid-template-columns: 1fr; }
+  .hero-btns         { flex-direction: column; }
+}
