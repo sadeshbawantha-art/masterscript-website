@@ -1,5 +1,5 @@
 /* ============================================================
-   form.js – Enquiry Form: File Upload UI + Submit Feedback
+   form.js – Enquiry Form: File Upload UI + Submit via AJAX
    ============================================================ */
 
 (function () {
@@ -60,7 +60,6 @@
   }
 
   // ── Sync selectedFiles array back to the real <input> ─────
-  // This ensures the browser's FormData includes all chosen files.
   function syncInputFiles() {
     if (!fileInput) return;
     var dt = new DataTransfer();
@@ -105,16 +104,60 @@
     });
   }
 
-  // ── Form submission feedback ──────────────────────────────
+  // ── Form submission via AJAX ──────────────────────────────
   if (form) {
-    form.addEventListener('submit', function () {
-      // Show a brief confirmation (FormSubmit handles actual delivery)
-      setTimeout(function () {
-        if (status) {
-          status.textContent = '✅ Enquiry sent! We\'ll be in touch shortly.';
-          status.className = 'success';
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var submitBtn = form.querySelector('[type="submit"]');
+
+      // Show sending state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+      if (status) {
+        status.textContent = '';
+        status.className = '';
+      }
+
+      fetch('https://formsubmit.co/ajax/sadeshbawantha@gmail.com', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Network error');
+        return res.json();
+      })
+      .then(function (data) {
+        if (data.success) {
+          if (status) {
+            status.textContent = '✅ Enquiry sent! We’ll be in touch shortly.';
+            status.className = 'success';
+          }
+          form.reset();
+          selectedFiles = [];
+          renderFiles();
+        } else {
+          throw new Error('FormSubmit rejected');
         }
-      }, 700);
+      })
+      .catch(function () {
+        if (status) {
+          status.innerHTML =
+            '❌ Could not send your enquiry. Please email us directly at ' +
+            '<a href="mailto:sadeshbawantha@gmail.com">sadeshbawantha@gmail.com</a>.';
+          status.className = 'error';
+        }
+      })
+      .then(function () {
+        // Always re-enable the button
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = '📩 Send Enquiry';
+        }
+      });
     });
   }
 
